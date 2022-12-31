@@ -1,0 +1,9 @@
+﻿  Battleship.cpp
+D:\C++\Battleship\Battleship\Battleship.cpp(7,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\C++\Battleship\Battleship\Battleship.cpp(212,14): warning C4244: =: преобразование "time_t" в "int", возможна потеря данных
+D:\C++\Battleship\Battleship\Battleship.cpp(327,15): warning C4244: =: преобразование "time_t" в "int", возможна потеря данных
+  Source.cpp
+D:\C++\Battleship\Battleship\Source.cpp(4,14): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
+D:\C++\Battleship\Battleship\Source.cpp(4,17): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
+  Создание кода...
+  Battleship.vcxproj -> D:\C++\Battleship\x64\Debug\Battleship.exe
