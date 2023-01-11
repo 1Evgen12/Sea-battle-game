@@ -309,12 +309,27 @@ int main()
 
 				if (resultShot == 1) {
 					cout << "\tПодбил!";
+					if (player == 1)PlaySound(L"popadanie.wav", NULL, SND_ASYNC);
 				}
 				else if (resultShot == 2) {
 					cout << "\tПотоплен!";
+					if (player == 1) {
+						PlaySound(L"potoplen.wav", NULL, SND_ASYNC);
+						if (turn == 0) {
+							Sleep(1500);
+						}
+					}
+
 				}
 				else {
 					cout << "\tПромах";
+					int f = rand () % 2;
+					if (player == 1) {
+						if (f == 0)
+							PlaySound(L"miss.wav", NULL, SND_ASYNC);
+						else
+							PlaySound(L"vzryiv-v-vode.wav", NULL, SND_ASYNC);
+					}
 				}
 
 				if (player == 1) 
@@ -340,10 +355,13 @@ int main()
 			if (player == 1 && (count_ships == 0 || count_ships2 == 0)) {
 				if (count_ships == 0) {
 					cout << "     Вы проиграли!\n\n";
+					PlaySound(L"loose", NULL, SND_ASYNC);
 					break;
 				}
 				else if (count_ships2 == 0) {
 					cout << "     Вы победили!\n\n";
+					Sleep(1000);
+					PlaySound(L"victory", NULL, SND_ASYNC);
 					break;
 				}
 			}
